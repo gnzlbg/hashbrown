@@ -25,7 +25,6 @@
 #![warn(missing_docs)]
 
 #[cfg(test)]
-#[cfg_attr(feature = "rayon", macro_use)]
 extern crate std;
 #[cfg(test)]
 extern crate rand;
@@ -41,6 +40,7 @@ extern crate serde;
 #[cfg_attr(test, macro_use)]
 extern crate std as alloc;
 
+mod scopeguard;
 mod external_trait_impls;
 mod fx;
 mod map;
